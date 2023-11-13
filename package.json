@@ -21,6 +21,8 @@
     "lint": "eslint --ext .ts .",
     "postinstall": "patch-package && husky install",
     "prebuild": "rimraf dist/ .bob/ tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "prepare": "yarn build",
     "prerelease": "yarn build",
     "prettier": "prettier --write --list-different .",
     "prettier:check": "prettier --check .",
